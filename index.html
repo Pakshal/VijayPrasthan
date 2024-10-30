@@ -33,6 +33,7 @@
             position: relative;
             height: 800px;
             background: url('https://img.veenaworld.com/wp-content/uploads/2021/07/Dilwara-Jain-Temple-Mount-Abu-Timings-Location.jpg') no-repeat center center;
+            //background: url('https://i.pinimg.com/originals/cc/f8/3f/ccf83f4e4e6c0c6cfb98124e30ff65e0.jpg') no-repeat center center;
             background-size: cover;
             color: white;
             display: flex;
@@ -40,7 +41,13 @@
             justify-content: center;
             align-items: center;
         }
-        .hero h1, .hero h3 {
+        .hero h1 {
+            margin: 0;
+            padding: 1.0rem;
+            color: yellow;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero h3 {
             margin: 0;
             padding: 1.0rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -52,12 +59,12 @@
             margin: auto;
             padding: 20px;
             text-align: left;
-            height: 300px; /* Set fixed height for uniformity */
+            height: 400px; /* Set fixed height for uniformity */
             width: 100%;
         }
         .speaker-image {
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 300px;
             border-radius: 50%;
             margin-right: 20px;
         }
@@ -124,6 +131,33 @@
         .agenda-text {
             color: yellow;
         }
+        .social-icons {
+        position: fixed;
+        right: 20px; /* Adjust position from the right */
+        bottom: 20px; /* Adjust position from the bottom */
+        background-color: white; /* Background for visibility */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow */
+        padding: 10px; /* Padding around icons */
+        display: flex;
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center; /* Center icons */
+        z-index: 1000; /* Ensure it stays on top */
+    }
+
+    .social-icon {
+        margin: 10px 0; /* Space between icons */
+        transition: transform 0.2s; /* Smooth scaling effect */
+    }
+
+    .social-icon img {
+        width: 30px; /* Icon size */
+        height: 30px; /* Icon size */
+    }
+
+    .social-icon:hover {
+        transform: scale(1.1); /* Scale up on hover */
+    }
         @media (min-width: 768px) {
             .agenda-details {
                 flex-direction: row;
@@ -165,14 +199,28 @@
 <!-- Hero Section -->
 <div class="hero">
     <h1>Vijay Prasthan</h1>
+    <h5>9 steps to wisdom</h5>
     <h3>KIMS Auditorium</h3>
     <h3>Nov 17, 2024, 5:30PM</h3>
     <a class="btn btn-danger btn-get-tickets-title" href="#getTickets">Get Tickets</a>
 </div>
 
+<!-- Social Media Icons Section -->
+<div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" />
+    </a>
+    <a href="https://twitter.com" target="_blank" class="social-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/twitter-squared.png" alt="Twitter" />
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" />
+    </a>
+</div>
+
 <!-- Speaker Section -->
 <div class="container speaker-section" id="speakers">
-    <h1>Speaker</h1><br><br><br>
+    <h1>Speaker</h1><br></br><br>
     <img src="https://www.rahulkapoor.in/images/2023/rahul-page-banner.jpg" alt="Rahul Kapoor" class="speaker-image">
     <div>
         <h2>Rahul Kapoor</h2>
@@ -248,7 +296,7 @@
 <div class="container agenda-section" id="agenda">
     <h1>Agenda</h1>
     <div class="agenda-details">
-        <img src="path/to/sample-image.jpg" alt="Sample Agenda Image" class="agenda-image">
+        <img src="https://i2.pngimg.me/thumb/f/720/m2i8G6Z5d3G6d3H7.jpg" alt="Sample Agenda Image" class="agenda-image">
         <div>
             <h2 class="agenda-text">Agenda:</h2>
             <ul class="agenda-text">
