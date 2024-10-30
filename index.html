@@ -33,7 +33,6 @@
             position: relative;
             height: 800px;
             background: url('https://img.veenaworld.com/wp-content/uploads/2021/07/Dilwara-Jain-Temple-Mount-Abu-Timings-Location.jpg') no-repeat center center;
-            //background: url('https://i.pinimg.com/originals/cc/f8/3f/ccf83f4e4e6c0c6cfb98124e30ff65e0.jpg') no-repeat center center;
             background-size: cover;
             color: white;
             display: flex;
@@ -43,75 +42,71 @@
         }
         .hero h1 {
             margin: 0;
-            padding: 1.0rem;
+            padding: 1rem;
             color: yellow;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .hero h3 {
             margin: 0;
-            padding: 1.0rem;
+            padding: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .speaker-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             margin: auto;
             padding: 20px;
-            text-align: left;
-            height: 400px; /* Set fixed height for uniformity */
-            width: 100%;
+            text-align: center;
         }
         .speaker-image {
-            width: 400px;
-            height: 300px;
+            width: 300px;
+            height: auto;
             border-radius: 50%;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
         .sponsors-section {
             margin: auto;
         }
         .sponsor-wrapper {
-        position: relative;
-        width: 100%; /* Ensure full width in column */
-        overflow: hidden; /* Hide overflow to avoid content spilling */
+            position: relative;
+            width: 100%;
+            overflow: hidden;
         }
-
         .sponsor-image {
-        width: 100%; /* Full width for responsive images */
-        height: auto; /* Maintain aspect ratio */
-        transition: transform 0.3s; /* Transition for hover effect */
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
         }
-
         .sponsor-wrapper:hover .sponsor-image {
-        transform: scale(1.05); /* Slight zoom effect on hover */
+            transform: scale(1.05);
         }
-
         .sponsor-description {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-        color: white;
-        opacity: 0; /* Hidden by default */
-        transition: opacity 0.3s; /* Smooth transition for visibility */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 10px; /* Padding for better readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
         }
-
         .sponsor-wrapper:hover .sponsor-description {
-            opacity: 1; /* Show description on hover */
+            opacity: 1;
         }
         .agenda-section {
             background-color: yellow;
             padding: 20px;
             border-radius: 10px;
             margin: auto;
+            text-align: center;
         }
         .agenda-details {
             background-color: black;
@@ -132,41 +127,42 @@
             color: yellow;
         }
         .social-icons {
-        position: fixed;
-        right: 20px; /* Adjust position from the right */
-        bottom: 20px; /* Adjust position from the bottom */
-        background-color: white; /* Background for visibility */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow */
-        padding: 10px; /* Padding around icons */
-        display: flex;
-        flex-direction: column; /* Stack icons vertically */
-        align-items: center; /* Center icons */
-        z-index: 1000; /* Ensure it stays on top */
-    }
-
-    .social-icon {
-        margin: 10px 0; /* Space between icons */
-        transition: transform 0.2s; /* Smooth scaling effect */
-    }
-
-    .social-icon img {
-        width: 30px; /* Icon size */
-        height: 30px; /* Icon size */
-    }
-
-    .social-icon:hover {
-        transform: scale(1.1); /* Scale up on hover */
-    }
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+        }
+        .social-icon {
+            margin: 10px 0;
+            transition: transform 0.2s;
+        }
+        .social-icon img {
+            width: 30px;
+            height: 30px;
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
         @media (min-width: 768px) {
+            .speaker-section {
+                flex-direction: row;
+                text-align: left;
+            }
+            .speaker-image {
+                margin-right: 20px;
+            }
             .agenda-details {
                 flex-direction: row;
             }
             .agenda-image {
                 margin-right: 20px;
-            }
-            .speaker-section {
-                justify-content: flex-start; /* Adjust alignment */
             }
         }
     </style>
@@ -220,7 +216,7 @@
 
 <!-- Speaker Section -->
 <div class="container speaker-section" id="speakers">
-    <h1>Speaker</h1><br></br><br>
+    <h1>Speaker</h1>
     <img src="https://www.rahulkapoor.in/images/2023/rahul-page-banner.jpg" alt="Rahul Kapoor" class="speaker-image">
     <div>
         <h2>Rahul Kapoor</h2>
@@ -289,9 +285,6 @@
     </div>
 </div>
 
-<br>
-<br>
-<br>
 <!-- Agenda Section -->
 <div class="container agenda-section" id="agenda">
     <h1>Agenda</h1>
@@ -310,4 +303,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
