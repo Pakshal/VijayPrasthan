@@ -7,101 +7,100 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            padding-top: 70px; /* Adjusted for taller navbar */
+            padding-top: 70px;
         }
         .navbar {
-            background-color: yellow; /* Set navbar color to yellow */
-            padding: 1rem; /* Increase padding for taller navbar */
+            background-color: yellow;
+            padding: 1rem;
         }
         .navbar-brand, .nav-link {
-            font-size: 1.25rem; /* Increase font size */
-            color: black; /* Change link color for contrast */
+            font-size: 1.25rem;
+            color: black;
         }
         .btn-get-tickets {
-            color: white; /* Text color for button */
-            background-color: black; /* Button color */
-            border: none; /* Remove border */
-            padding: 0.5rem 1rem; /* Button padding */
+            color: white;
+            background-color: black;
+            border: none;
+            padding: 0.5rem 1rem;
         }
         .btn-get-tickets-title {
-            color: black; /* Text color for button */
-            background-color: yellow; /* Button color */
-            border: none; /* Remove border */
-            padding: 0.5rem 1rem; /* Button padding */
-        }
-        .btn-get-tickets:hover {
-            background-color: #333; /* Darker shade on hover */
+            color: black;
+            background-color: yellow;
+            border: none;
+            padding: 0.5rem 1rem;
         }
         .hero {
             position: relative;
-            height: 800px; /* Height of the image section */
-            background: url('https://img.veenaworld.com/wp-content/uploads/2021/07/Dilwara-Jain-Temple-Mount-Abu-Timings-Location.jpg') no-repeat center center; /* Placeholder for image */
-            background-size: cover; /* Cover the entire section */
-            color: white; /* Text color */
+            height: 800px;
+            background: url('https://img.veenaworld.com/wp-content/uploads/2021/07/Dilwara-Jain-Temple-Mount-Abu-Timings-Location.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: bottom;
         }
-        .hero h1 {
-            color: yellow
+        .hero h1, .hero h3 {
             margin: 0;
             padding: 1.0rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
-        }
-        .hero h3 {
-            margin: 0;
-            padding: 1.0rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .speaker-section {
-            margin: 100px 0; /* Margin around speaker section */
-            text-align: center; /* Center text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding: 20px;
+            text-align: left;
+            height: 300px; /* Set fixed height for uniformity */
+            width: 100%;
         }
         .speaker-image {
-            width: 200px; /* Set width for speaker image */
-            height: 100px; /* Maintain aspect ratio */
-            border-radius: 50%; /* Circular image */
-            margin-bottom: 20px; /* Space below image */
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 20px;
         }
         .sponsors-section {
-            margin: 50px 0; /* Margin around sponsors section */
+            margin: auto;
         }
         .sponsor-image {
-            width: 100%; /* Full width for responsive images */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
         }
         .agenda-section {
-            background-color: yellow; /* Yellow background for the agenda section */
-            padding: 20px; /* Padding for the section */
-            border-radius: 10px; /* Rounded corners */
-            margin: 50px 0; /* Margin around section */
+            background-color: yellow;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
         }
         .agenda-details {
-            background-color: black; /* Black background for agenda details */
-            color: white; /* White text color */
-            padding: 20px; /* Padding for the details box */
-            border-radius: 10px; /* Rounded corners */
-            display: flex; /* Flexbox for alignment */
-            flex-direction: column; /* Stack vertically */
-            align-items: center; /* Center items */
-            text-align: center; /* Center text */
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .agenda-image {
-            width: 100px; /* Set width for sample agenda image */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 10px; /* Space below image */
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
         }
         .agenda-text {
-            color: yellow; /* Yellow font color for agenda text */
+            color: yellow;
         }
         @media (min-width: 768px) {
             .agenda-details {
-                flex-direction: row; /* Side by side on larger screens */
+                flex-direction: row;
             }
             .agenda-image {
-                margin-right: 20px; /* Space between image and text */
+                margin-right: 20px;
+            }
+            .speaker-section {
+                justify-content: flex-start; /* Adjust alignment */
             }
         }
     </style>
@@ -141,10 +140,12 @@
 
 <!-- Speaker Section -->
 <div class="container speaker-section" id="speakers">
-    <h1>Featured Speaker</h1>
-    <img src="https://www.rahulkapoor.in/images/2023/rahul-page-banner.jpg" alt="Rahul Kapoor" class="speaker-image"> <!-- Placeholder for speaker image -->
-    <h2>Rahul Kapoor</h2>
-    <p>Rahul Kapoor is a renowned speaker with extensive experience in Jain philosophy and spirituality. He has dedicated his life to promoting the principles of Jainism and inspiring others to lead a life of compassion and non-violence. Through his engaging talks and workshops, Rahul shares his insights on personal growth and spiritual development.</p>
+    <h1>Speaker</h1><br><br><br>
+    <img src="https://www.rahulkapoor.in/images/2023/rahul-page-banner.jpg" alt="Rahul Kapoor" class="speaker-image">
+    <div>
+        <h2>Rahul Kapoor</h2>
+        <p>Rahul Kapoor is a renowned speaker with extensive experience in Jain philosophy and spirituality. He has dedicated his life to promoting the principles of Jainism and inspiring others to lead a life of compassion and non-violence.</p>
+    </div>
 </div>
 
 <!-- Sponsors Section -->
@@ -152,47 +153,50 @@
     <h1>Our Sponsors</h1>
     <div class="row">
         <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 1" class="sponsor-image"> <!-- Placeholder for Sponsor 1 -->
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 1" class="sponsor-image">
         </div>
         <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 2" class="sponsor-image"> <!-- Placeholder for Sponsor 2 -->
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 2" class="sponsor-image">
         </div>
         <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 3" class="sponsor-image"> <!-- Placeholder for Sponsor 3 -->
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 3" class="sponsor-image">
         </div>
         <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 4" class="sponsor-image"> <!-- Placeholder for Sponsor 4 -->
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 5" class="sponsor-image"> <!-- Placeholder for Sponsor 5 -->
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 6" class="sponsor-image"> <!-- Placeholder for Sponsor 6 -->
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 7" class="sponsor-image"> <!-- Placeholder for Sponsor 7 -->
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 8" class="sponsor-image"> <!-- Placeholder for Sponsor 8 -->
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 4" class="sponsor-image">
         </div>
     </div>
     <div class="row">
         <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 9" class="sponsor-image"> <!-- Placeholder for Sponsor 9 -->
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 5" class="sponsor-image">
         </div>
         <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 10" class="sponsor-image"> <!-- Placeholder for Sponsor 10 -->
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 6" class="sponsor-image">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 7" class="sponsor-image">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 8" class="sponsor-image">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 9" class="sponsor-image">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 10" class="sponsor-image">
         </div>
     </div>
 </div>
 
+<br>
+<br>
+<br>
 <!-- Agenda Section -->
 <div class="container agenda-section" id="agenda">
     <h1>Agenda</h1>
     <div class="agenda-details">
-        <img src="path/to/sample-image.jpg" alt="Sample Agenda Image" class="agenda-image"> <!-- Placeholder for sample image -->
+        <img src="path/to/sample-image.jpg" alt="Sample Agenda Image" class="agenda-image">
         <div>
             <h2 class="agenda-text">Agenda:</h2>
             <ul class="agenda-text">
@@ -201,4 +205,9 @@
                 <li>6:00 PM to 6:15 PM - Welcome</li>
                 <li>6:15 PM to 9:00 PM - Main Event</li>
             </ul>
-        </div
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd
