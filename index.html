@@ -18,6 +18,12 @@
             align-items: center;
             justify-content: center;
         }
+        /* Hide navbar in mobile view */
+        @media (max-width: 768px) {
+            .navbar {
+                display: none; /* Completely hide navbar */
+            }
+        }
         .image-section {
             margin: 0; /* No margin to avoid spacing issues */
             position: relative; /* For overlay positioning */
@@ -30,20 +36,29 @@
         }
         .overlay {
             position: absolute;
-            top: 30%;
-            left: 30%;
-            right: 30%;
-            bottom: 60%; /* Adjusted to move the button higher */
+            top: 20%; /* Adjust for better visibility on smaller screens */
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+            width: 80%; /* Responsive width */
+            max-width: 600px; /* Maximum width to prevent overflow */
             display: flex;
             flex-direction: column;
             justify-content: center; /* Center vertically */
             align-items: center; /* Center horizontally */
             color: white;
             background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            padding: 10px; /* Optional padding for spacing */
+            padding: 20px; /* Increased padding for better spacing */
+            border-radius: 10px; /* Optional: rounded corners */
         }
         .overlay h4, .overlay p {
             margin: 0.5rem;
+            text-align: center; /* Center the text */
+        }
+        .overlay h4 {
+            font-size: 1.5rem; /* Responsive font size */
+        }
+        .overlay p {
+            font-size: 1rem; /* Responsive font size */
         }
         .btn-get-tickets {
             background-color: #007bff; /* Different color for Get Tickets button */
@@ -80,11 +95,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <a class="navbar-brand" href="#">Vijay Prasthan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto" style="align-items: center;">
+        <ul class="navbar-nav" style="align-items: center;">
             <li class="nav-item">
                 <a class="nav-link" href="#intro">Intro</a>
             </li>
@@ -98,7 +110,7 @@
                 <a class="nav-link" href="#schedule">Schedule</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#schedule">Sponsors</a>
+                <a class="nav-link" href="#sponsors">Sponsors</a>
             </li>
             <li class="nav-item" style="margin-bottom: 0.5rem">
                 <a class="btn btn-get-tickets" href="https://pages.razorpay.com/VijayPrasthan" target="_blank">Get Tickets</a>
@@ -141,7 +153,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 <script>
