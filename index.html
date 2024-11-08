@@ -3,303 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jain Diksha Event</title>
+    <title>Thank You for Registering</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            padding-top: 70px;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
         }
-        .navbar {
-            background-color: yellow;
-            padding: 1rem;
-        }
-        .navbar-brand, .nav-link {
-            font-size: 1.25rem;
-            color: black;
-        }
-        .btn-get-tickets {
-            color: white;
-            background-color: black;
-            border: none;
-            padding: 0.5rem 1rem;
-        }
-        .btn-get-tickets-title {
-            color: black;
-            background-color: yellow;
-            border: none;
-            padding: 0.5rem 1rem;
-        }
-        .hero {
-            position: relative;
-            height: 800px;
-            background: url('https://img.veenaworld.com/wp-content/uploads/2021/07/Dilwara-Jain-Temple-Mount-Abu-Timings-Location.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .hero h1 {
-            margin: 0;
-            padding: 1rem;
-            color: yellow;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .hero h3 {
-            margin: 0;
-            padding: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .speaker-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .speaker-image {
-            width: 300px;
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        .sponsors-section {
-            margin: auto;
-        }
-        .sponsor-wrapper {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        .sponsor-image {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s;
-        }
-        .sponsor-wrapper:hover .sponsor-image {
-            transform: scale(1.05);
-        }
-        .sponsor-description {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-        }
-        .sponsor-wrapper:hover .sponsor-description {
-            opacity: 1;
-        }
-        .agenda-section {
-            background-color: yellow;
-            padding: 20px;
-            border-radius: 10px;
-            margin: auto;
-            text-align: center;
-        }
-        .agenda-details {
-            background-color: black;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .agenda-image {
-            width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .agenda-text {
-            color: yellow;
-        }
-        .social-icons {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
+        .thank-you-container {
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
         }
-        .social-icon {
-            margin: 10px 0;
-            transition: transform 0.2s;
+        .thank-you-container h1 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
-        .social-icon img {
-            width: 30px;
-            height: 30px;
+        .thank-you-container p {
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
-        .social-icon:hover {
-            transform: scale(1.1);
+        .thank-you-container .cta-button {
+            background-color: #007bff;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
-        @media (min-width: 768px) {
-            .speaker-section {
-                flex-direction: row;
-                text-align: left;
-            }
-            .speaker-image {
-                margin-right: 20px;
-            }
-            .agenda-details {
-                flex-direction: row;
-            }
-            .agenda-image {
-                margin-right: 20px;
-            }
+        .thank-you-container .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .thank-you-container img {
+            width: 150px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="#">Vijay Prasthan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#speakers">Speakers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sponsors">Sponsors</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#agenda">Agenda</a>
-            </li>
-            <li class="nav-item">
-                <a class="btn btn-get-tickets" href="https://pages.razorpay.com/VijayPrasthan" target="_blank">Get Tickets</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<div class="hero">
-    <h1>Vijay Prasthan</h1>
-    <h5>9 steps to wisdom</h5>
-    <h3>KIMS Auditorium</h3>
-    <h3>Nov 17, 2024, 5:30PM</h3>
-    <a class="btn btn-danger btn-get-tickets-title" href="https://pages.razorpay.com/VijayPrasthan" target="_blank">Get Tickets</a>
-</div>
-
-<!-- Social Media Icons Section -->
-<div class="social-icons">
-    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-        <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" />
-    </a>
-    <a href="https://twitter.com" target="_blank" class="social-icon">
-        <img src="https://img.icons8.com/ios-filled/50/000000/twitter-squared.png" alt="Twitter" />
-    </a>
-    <a href="https://www.instagram.com" target="_blank" class="social-icon">
-        <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" />
-    </a>
-</div>
-
-<!-- Speaker Section -->
-<div class="container speaker-section" id="speakers">
-    <h1>Speaker</h1>
-    <img src="https://www.rahulkapoor.in/images/2023/rahul-page-banner.jpg" alt="Rahul Kapoor" class="speaker-image">
-    <div>
-        <h2>Rahul Kapoor</h2>
-        <p>Rahul Kapoor is a renowned speaker with extensive experience in Jain philosophy and spirituality. He has dedicated his life to promoting the principles of Jainism and inspiring others to lead a life of compassion and non-violence.</p>
-    </div>
-</div>
-
-<!-- Sponsors Section -->
-<div class="container sponsors-section" id="sponsors">
-    <h1>Our Sponsors</h1>
-    <div class="row">
-        <div class="col-6 col-md-3">
-            <div class="sponsor-wrapper">
-                <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 1" class="sponsor-image">
-                <div class="sponsor-description">
-                    <p>Sponsor 1 Description</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="sponsor-wrapper">
-                <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 2" class="sponsor-image">
-                <div class="sponsor-description">
-                    <p>Sponsor 2 Description</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="sponsor-wrapper">
-                <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 3" class="sponsor-image">
-                <div class="sponsor-description">
-                    <p>Sponsor 3 Description</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="sponsor-wrapper">
-                <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 4" class="sponsor-image">
-                <div class="sponsor-description">
-                    <p>Sponsor 4 Description</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 5" class="sponsor-image">
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 6" class="sponsor-image">
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 7" class="sponsor-image">
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 8" class="sponsor-image">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 9" class="sponsor-image">
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="https://rishihood.edu.in/wp-content/uploads/2000/01/Motilal-Oswal.png" alt="Sponsor 10" class="sponsor-image">
-        </div>
-    </div>
-</div>
-
-<!-- Agenda Section -->
-<div class="container agenda-section" id="agenda">
-    <h1>Agenda</h1>
-    <div class="agenda-details">
-        <img src="https://i2.pngimg.me/thumb/f/720/m2i8G6Z5d3G6d3H7.jpg" alt="Sample Agenda Image" class="agenda-image">
-        <div>
-            <h2 class="agenda-text">Agenda:</h2>
-            <ul class="agenda-text">
-                <li>5:30 PM to 6:00 PM - Ticket Check</li>
-                <li>5:30 PM to 6:00 PM - High Tea</li>
-                <li>6:00 PM to 6:15 PM - Welcome</li>
-                <li>6:15 PM to 9:00 PM - Main Event</li>
-            </ul>
-        </div>
-    </div>
+<!-- Thank You Section -->
+<div class="thank-you-container">
+    <img src="https://img.icons8.com/ios-filled/100/000000/checkmark.png" alt="Success">
+    <h1>Thank You for Registering!</h1>
+    <p>We appreciate your interest in the "Vijay Prasthan" event. Your registration has been successfully completed.</p>
+    <p>We will send your event pass shortly. Please check your email for further details.</p>
+    <a href="https://www.yourwebsite.com" class="cta-button">Return to Homepage</a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
